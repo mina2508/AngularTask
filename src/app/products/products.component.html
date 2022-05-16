@@ -1,0 +1,91 @@
+<!-- <h1>{{ storeName }}</h1>
+<img [src]="storeLogo" />
+<div *ngIf="discount != 'NoDiscount'; then mytemplate"></div>
+<ng-template #mytemplate>
+  <h3>we offer an explicit discount of {{ discount }}</h3>
+</ng-template> -->
+
+<!-- <div *ngFor="let category of categoryList">
+  <h3>{{ category.Name }}</h3>
+</div> -->
+<!-- <div class="input-group mb-3">
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose category</option>
+    <option *ngFor="let category of categoryList">
+      {{ category.Name }}
+    </option>
+  </select>
+</div>
+
+<input
+  type="text"
+  class="form-control"
+  aria-label="Text input with checkbox"
+  [(ngModel)]="clientName"
+/>
+<h3>clientName {{ clientName }}</h3>
+<button (click)="toggleIsPurchased()">Buy</button> -->
+
+<!-- <div *ngIf="renderValuesClicked; then mytable"></div> -->
+<!-- <div *ngIf="isPurchased; then thankdiv; else mytable"></div> -->
+<ng-template #mytable>
+  <div class="container mt-5">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <th>{{ product.ID }}</th>
+          <td>{{ product.Name }}</td>
+          <td>{{ product.Quantity }}</td>
+          <td>{{ product.Price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
+
+<!-- <ng-template #thankdiv>
+  <h3>thank you for purchasing from our store {{ clientName }}</h3>
+</ng-template> -->
+<div class="container mt-5">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <th>{{ product.ID }}</th>
+        <td>{{ product.Name }}</td>
+        <td>{{ product.Quantity }}</td>
+        <td>{{ product.Price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center">
+  <a class="btn btn-primary m-2" [routerLink]="['/Product/discountedproducts']"
+    >Product with discount</a
+  >
+  <a
+    class="btn btn-primary m-2"
+    [routerLink]="['/Product/undiscountedproducts']"
+    >Product without discount</a
+  >
+</div>
+<router-outlet> </router-outlet>
+
+<!-- 
+<h3>store name :{{ storeName | uppercase }}</h3>
+<h3>discount {{ discount | percent }}</h3> -->

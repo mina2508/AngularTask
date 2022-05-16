@@ -1,0 +1,14 @@
+<div class="container m-auto row">
+  <div class="col-md-3" *ngFor="let user of Users">
+    <div class="card">
+      <img class="card-img-top" src="../assets/user.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text">
+          {{ user.username }}
+          {{ user.email }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
